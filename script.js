@@ -13,7 +13,14 @@ function compute() {
 
 
 }
-    
+    function validateAmount() {
+    var principal = document.getElementById("principal").value;
+    var moreThenZero = parseInt(principal) > 0;
+    if (!moreThenZero) {
+        alert("Enter a positive number please");
+        document.getElementById("principal").focus();
+    }
+}
 function updateRate() {
 
     var rateval = document.getElementById("rate").value;
